@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%= docTitle %></title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" />
+    <link href="/stylesheets/common.css" rel="stylesheet" />
+    <link href="/stylesheets/stu_main.css" rel="stylesheet" />
+</head>
+<body>
+    <article class="top_left top">
+    	<div class="top_left_logo logo">
+        	<a href="/manage/stuSelectedLession"></a>
+         </div>
+         <span class="top_left_detail detail"><%= stuSelectedLession %></span>
+    </article>
+    <article class="top_right top">
+         <div class="top_right_logo logo">
+             <a href="/manage/stuAllLession"></a>
+         </div>
+         <span class="top_right_detail detail"><%= stuAllLession %></span>
+    </article>
+    <article class="bottom_left bottom">
+         <div class="bottom_left_logo logo">
+         	<a href="/manage/stuForTeacher"></a>
+         </div>
+         <span class="bottom_left_detail detail"><%= stuForTeacher %></span>
+    </article>
+    <article class="bottom_right bottom">
+         <div class="bottom_right_logo logo">
+             <a href="/manage/stuInfo"></a>
+         </div>
+         <span class="bottom_right_detail detail"><%= stuInfo %></span>
+    </article>
+</body>
+</html>

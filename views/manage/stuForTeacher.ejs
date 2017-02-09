@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%= docTitle %></title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" />
+    <link href="/stylesheets/common.css" rel="stylesheet" />
+    <link href="/stylesheets/stu_top_left.css" rel="stylesheet" />
+</head>
+<body>
+<body>
+    <% for(var i=0; i<item.length; i++) { %>
+    <div class="data teacher">
+        <div class="data_header"><%= item[i].teacher_academy %></div>
+        <div class="data_body"><%= item[i].teacher_name %>老师</div>
+        <div class="data_hand"><%= item[i].teacher_birthday %></div>  
+        <ul>
+        	<li><b><%=id%></b><%= item[i].teacher_id %></li>
+            <li><b><%=age%></b><%= item[i].teacher_age %></li>
+			<li><b><%=sex%></b><%= item[i].teacher_sex %></li>
+            <li><b><%=tel%></b><%= item[i].teacher_telephone %></li>
+            <li><b><%=lession%></b><%= item[i].subject_name %></li>
+        </ul>   
+    </div>
+    <% } %>
+</body>
+</html>

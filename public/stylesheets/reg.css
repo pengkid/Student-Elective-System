@@ -1,0 +1,108 @@
+
+form {
+    width: 343px;
+    height: 850px;
+	margin: 5em auto;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, 0.5); 
+    
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+       -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+            box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+            
+    overflow: hidden; 
+}
+
+textarea{
+    display:block;
+    width: 276px;
+    height: 110px;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+	background: rgba(255, 255, 255, 0.4); 
+    border: 1px solid rgba(255,255,255,.6);
+    
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+             border-radius: 4px;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    overflow:hidden;
+}
+
+input {
+    display:block;
+    width: 276px;
+    height: 48px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+    border: 1px solid rgba(255,255,255,.4);
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    
+}
+
+input[type=button] {
+    cursor:pointer;
+}
+
+input.id, input.pwd, input.name, input.age, input.grade, input.message {
+    background: rgba(255, 255, 255, 0.4); 
+    padding-left:45px;
+}
+
+input:focus, textarea:focus { 
+	background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	overflow: hidden; 
+}
+
+form .right{
+	float:right;
+}
+
+.btn {
+    float:left;
+    margin-top: 2em;
+    width: 138px;
+    height: 44px;
+    border: 1px solid #253737;
+    background: #416b68;
+	font-family:"微软雅黑";
+    text-align: center;
+
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#6da5a3), to(#416b68));
+    background: -webkit-linear-gradient(top, #6da5a3, #416b68);
+       background: -moz-linear-gradient(top, #6da5a3, #416b68);
+        background: -ms-linear-gradient(top, #6da5a3, #416b68);
+         background: -o-linear-gradient(top, #6da5a3, #416b68);
+    
+    background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
+    
+    -webkit-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+       -moz-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+            box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    text-shadow: #333333 0 1px 0;
+    color: #e1e1e1;
+}
+

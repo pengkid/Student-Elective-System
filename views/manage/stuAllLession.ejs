@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%=docTitle%></title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" />
+    <link href="/stylesheets/common.css" rel="stylesheet" />
+    <link href="/stylesheets/stu_top_right.css" rel="stylesheet" />
+    <link href="/stylesheets/stu_top_left.css" rel="stylesheet" />
+</head>
+<body>
+	<% var j=0; for(var i=0; i<item.length; i++){ %>
+    <div class="data all_subject">
+    	<form method="post" action="">
+        	<div class="data_header"><%=item[i].subject_name%></div>
+        	<div class="data_body"><%=bodyTitle%></div>
+        	<ul>
+            	<li><b><%=subId%></b><input type="text" name="subject_id<%=i%>" value="<%=item[i].subject_id%>" size="4" style="border:none;" readonly /></li>
+            	<li><b><%=subTeacher%></b><%=item[i].subject_teacher%></li>
+            	<li><b><%=subDesc%></b><%=item[i].subject_description%></li>
+        	</ul>
+        	<div class="data_footer">
+            	<input type="button" id="add" class="data_change" value="选课" size="1" name="<%=item[i].subject_id%>" style="border:none" />
+        	</div>
+    	</form>
+    </div>
+    <% } %>
+   <script type="text/javascript">
+        var subArr = document.getElementsByClassName("data_change");
+        for(var k=0; k<subArr.length; k++){
+            subArr[k].onclick =  function () {
+            	var that = this;
+            	var subName = that.getAttribute('name');
+                var options = {
+                    url: '/manage/stuAllLession',
+                    type: "POST",
+                    data: { sub: subName },
+                    dataType: "json",
+                    success: function (response, xml) {
+                    	if(response){
+                    		alert("你是逗比吧！都特么选过了还想选！");
+                    	}
+                    	else{
+                    		alert("选课成功！一看就是爱学习的!");
+                        	location.assign('/stu_index');
+                    	}
+                    },
+                    fail: function (status) {
+                        console.log("err");
+                    }
+                } || {};
+                options.type = (options.type || "GET").toUpperCase();
+                options.dataType = options.dataType || "json";
+                var params = formatParams(options.data);
+
+                if (window.XMLHttpRequest) {
+                    var xhr = new XMLHttpRequest();
+                } else {
+                    var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        var status = xhr.status;
+                        if (status >= 200 && status < 300) {
+                            options.success && options.success(xhr.responseText, xhr.responseXML);
+                        } else {
+                            options.fail && options.fail(status);
+                        }
+                    }
+                }
+
+                if (options.type == "POST") {
+                    xhr.open("POST", options.url, true);
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.send(params);
+                }
+            }
+
+    			function formatParams(data) {
+        		var arr = [];
+       			for (var name in data) {
+                    arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+        		}
+        		arr.push(("v=" + Math.random()).replace(".",""));
+        		return arr.join("&");
+    		}
+        }
+    </script>
+</body>
+</html>

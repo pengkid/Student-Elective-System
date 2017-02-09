@@ -1,0 +1,14 @@
+
+.all_subject{
+		height: 500px;
+}
+
+.all_subject .data_footer{
+	position:absolute;
+	bottom: 2.5em;
+}
+
+.all_subject li:nth-of-type(3){
+	line-height: 1.5em;
+	letter-spacing: .2em;
+}

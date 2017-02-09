@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%=docTitle%></title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" />
+    <link href="/stylesheets/common.css" rel="stylesheet" />
+    <link href="/stylesheets/stu_bottom_right.css" rel="stylesheet" />
+    <script type="text/javascript" src="/javascripts/stu_bottom_right.js"></script>
+</head>
+<body>
+<body>
+	<form method="post" action="" >
+		<input type="text" name="stu_name" class="name" value="<%=item[0].stu_name%>" readonly="readonly" />
+		<input type="text" name="stu_age"  class="age"  value="<%=item[0].stu_age%>"  readonly="readonly" />
+    	<input type="text" name="stu_sex"  class="name" value="<%=item[0].stu_sex%>"  readonly="readonly" />
+        <input type="text" name="stu_subject"  class="name" value="<%=item[0].stu_subject%>"  readonly="readonly" />
+        <input type="text" name="stu_grade"  class="name" value="<%=item[0].stu_grade%>"  readonly="readonly" />
+        <input type="text" name="stu_telephone"  class="name" value="<%=item[0].stu_telephone%>"  readonly="readonly" />
+        <textarea rows="4" cols="50" name="stu_describe" class="message" placeholder="个人简介" readonly><%=item[0].stu_describe%></textarea>
+    	<input name="change" class="btn left" type="button" value="修改" />
+        <input name="checked" class="btn right" type="submit" value="确定" style="background:#666;" disabled="disabled" />
+    </form>
+</body>
+</html>

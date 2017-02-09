@@ -1,0 +1,12 @@
+
+#add:active	{
+	background-color:#666;
+}
+
+#add:focus{
+	background-color:#666;
+}
+
+#add:checked{
+	background-color:#666;
+}

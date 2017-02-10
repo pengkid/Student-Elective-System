@@ -35,3 +35,11 @@ Node.js+Express+MySQL学生选课系统
 > 
 > **教师登录**  账号：t001 密码：12345
 > 
+
+## 截图
+>
+> <img src="public/images/demo1.png" alt="学生管理界面" width="50%">
+> 
+> <img src="public/images/demo2.png" alt="学生管理界面" width="50%">
+> 
+> 更多截图请看demo
